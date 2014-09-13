@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale_name }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pyramid web application">
+    <meta name="author" content="Pylons Project">
+
+    <title>電力使用状況</title>
+
+    <link rel="stylesheet" href="{{ request.static_url('homepower:static/css/reset.css') }}" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="{{ request.static_url('homepower:static/css/style.css') }}" type="text/css" media="screen" charset="utf-8" />
+  </head>
+
+  <body>
+
+    <div class="content">
+      {% block contents %}
+      {% endblock %}
+    </div>
+
+    <script src="{{ request.static_url('homepower:static/js/jquery.min.js') }}"></script>
+    {% block ext_js %}{% endblock %}
+
+  </body>
+
+</html>

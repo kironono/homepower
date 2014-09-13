@@ -1,0 +1,50 @@
+{% extends 'base.jinja2' %}
+
+
+{% block ext_js %}
+<script src="{{ request.static_url('homepower:static/js/socket.io.js') }}"></script>
+<script src="{{ request.static_url('homepower:static/js/app.js') }}"></script>
+{% endblock %}
+
+
+{% block contents %}
+<div id="power_used">
+  <div class="section clearfix">
+    <p class="description"><span id="now_power_time"></span> 現在の</p>
+    <div class="fl">
+      <h1 class="title">使用電力</h1>
+    </div>
+    <div class="fr tr">
+      <p class="pvalue"><span id="now_power_value">0.00</span> W</p>
+    </div>
+  </div>
+  <div class="section clearfix">
+    <div class="fl">
+      <p>24時間の使用電力量</p>
+    </div>
+    <div class="fr tr">
+      <p><span id="today_power_value">0.00</span> kWh</p>
+      <p><span id="today_power_charge">0.00</span> 円</p>
+    </div>
+  </div>
+  <div class="section clearfix">
+    <div class="fl">
+      <p>30日間の使用電力量</p>
+    </div>
+    <div class="fr tr">
+      <p><span id="month_power_value">0.00</span> kWh</p>
+      <p><span id="month_power_charge">0.00</span> 円</p>
+    </div>
+  </div>
+</div>
+
+<div id="power_history">
+  <div class="section">
+    <h1 class="title">使用電力状況</h1>
+  </div>
+  <div class="section">
+    <div id="container" style="min-width: 300px; height: 200px; margin: 0 auto"></div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+
+#power_used {
+    border-left: solid 10px limegreen;
+    border-bottom: solid 1px lightgray;
+}
+
+#power_used .title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+#power_used .title rt {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#power_used .pvalue {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+#power_history {
+    border-left: solid 10px orange;
+    border-bottom: solid 1px lightgray;
+}
+
+#power_history .title {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 50%;
+    line-height: 1.5em;
+}
+
+.section {
+    border-top: solid 1px lightgray;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.tr {
+    text-align: right;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
